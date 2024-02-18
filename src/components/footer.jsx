@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-[10px] sm:text-sm w-full py-10 text-center">
-      © Copyright {year}. Made by Priyanshu Singh
+      © Copyright {year}. Made by <a href="/" className="underline">Priyanshu Singh</a>
       </div>
         </div>
      
