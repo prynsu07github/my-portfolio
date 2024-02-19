@@ -1,3 +1,5 @@
+
+import Resume from '/MyResume.pdf'
 import socials from "../utils/constant.js";
 const Home = () => {
   return (
@@ -19,10 +21,15 @@ const Home = () => {
           A Frontend focused Web Developer building the Frontend of Websites and
           Web Applications that leads to the success of the overall product
         </p>
-
-        <button className="bg-purple-600 px-10 py-4 font-bold text-white text-xl rounded-lg hover:-translate-y-1 transition duration-150 ease-in-out shadow-md shadow-purple-400">
-          Download CV
-        </button>
+        <a
+        href={Resume}
+        download="Resume"
+        target="_blank"
+        rel="noreferrer"
+      ><button className="bg-purple-600 px-10 py-4 font-bold text-white text-xl rounded-lg hover:-translate-y-1 transition duration-150 ease-in-out shadow-md shadow-purple-400">
+      Download CV
+    </button></a>
+        
       </div>
     </div>
   );
