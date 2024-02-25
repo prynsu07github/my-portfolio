@@ -13,18 +13,10 @@ const About = () => {
 
   return (
     <div
-      className="min-h-screen h-auto w-full bg-#fafafa relative flex justify-center items-center py-16 sm:py-32"
+      className="min-h-screen h-auto w-full bg-[#fafafa] relative flex justify-center items-center py-16 sm:py-32"
       id="about"
     >
       <div className=" w-11/12 lg:w-9/12">
-        {/* <div className="flex flex-col items-center gap-8">
-          <h1 className="font-bold text-4xl uppercase">About Me</h1>
-          <Design1 />
-          <p className="mx-0 sm:mx-10 text-center  sm:text-xl text-gray-500">
-            Here you will find more information about me, what I do, and my
-            current skills mostly in terms of programming and technology
-          </p>
-        </div> */}
         <PageHeader heading="About Me" subheading="Here you will find more information about me, what I do, and my
             current skills mostly in terms of programming and technology"/>
         <div className="grid gap-16 lg:gap-32 grid-rows-1 grid-rows-auto lg:grid-cols-2 mt-16 sm:mt-32">
