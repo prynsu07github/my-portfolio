@@ -21,12 +21,12 @@ const Contact = () => {
 
   return (
     <div
-      className="min-h-screen h-auto w-full bg-#fafafa relative flex justify-center items-center py-16 sm:py-32"
-      id="contact"
+      className="contact min-h-screen h-auto w-full bg-#fafafa relative flex justify-center items-center py-16 sm:py-32"
+      id="contact" 
     >
       <div className=" w-11/12 lg:w-9/12 flex justify-center items-center flex-col">
       <PageHeader heading="contact" subheading="Feel free to Contact me by submitting the form below and I will get back to you as soon as possible" />
-      <form ref={form} onSubmit={sendEmail} className="bg-[#fff] flex flex-col p-5 sm:p-16 shadow-lg shadow-gray-400 rounded-lg w-full sm:w-8/12 mt-16 sm:mt-32 ">
+      <form id="form" ref={form} onSubmit={sendEmail} className="bg-[#fff] flex flex-col p-5 sm:p-16 shadow-lg shadow-gray-400 rounded-lg w-full sm:w-8/12 mt-16 sm:mt-32">
         <label>Name</label>
         <input
           required
