@@ -18,7 +18,7 @@ const Navbar = () => {
     }
   ]
   return (
-    <div className="bg-white-100 w-full py-5 px-10 lg:px-20 flex justify-center lg:justify-between shadow-xl z-10">
+    <div className="bg-white w-full py-5 px-10 lg:px-20 flex justify-center lg:justify-between shadow-xl z-10 fixed">
       <div className="flex gap-5 items-center">
         <div className="h-12 w-12 rounded-full border border-black overflow-hidden object-fit">
           <img src={ProfilePic} alt="profile" />
