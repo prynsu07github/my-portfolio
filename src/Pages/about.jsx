@@ -17,7 +17,7 @@ const About = () => {
 
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
-    const tl1 = gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#about",
         start: "top top", // when the top of the trigger hits the top of the viewport
@@ -26,7 +26,7 @@ const About = () => {
       },
     });
 
-    tl1.from(
+    tl.from(
       [
         "#about-heading",
         "#subheading-1",
@@ -36,17 +36,19 @@ const About = () => {
       ],
       {
         opacity: "0",
+        x:"-20px",
         stagger: ".5",
       } , "animation1"
     );
 
-    tl1.from("#skills", {
+    tl.from("#skills", {
       duration: "1.3",
+      x:"20px",
       opacity: "0",
     } , "animation1");
 
     return () => {
-      tl1.kill();
+      tl.kill();
     };
   }, []);
 
