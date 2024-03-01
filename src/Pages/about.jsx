@@ -22,7 +22,6 @@ const About = () => {
         trigger: "#about",
         start: "top top", // when the top of the trigger hits the top of the viewport
         end: "50% ,top",
-        markers: true,
       },
     });
 
@@ -38,13 +37,16 @@ const About = () => {
         opacity: "0",
         x:"-20px",
         stagger: ".5",
+        ease:true
       } , "animation1"
     );
 
-    tl.from("#skills", {
+    tl.from(["#skills-heading","#skills"], {
       duration: "1.3",
       x:"20px",
       opacity: "0",
+      stagger:".5",
+      ease:true,
     } , "animation1");
 
     return () => {
@@ -106,7 +108,7 @@ const About = () => {
             </a>
           </div>
           <div>
-            <p className="font-bold text-xl sm:text-2xl mb-5">My Skills</p>
+            <p id="skills-heading" className="font-bold text-xl sm:text-2xl mb-5">My Skills</p>
             <div id="skills" className="flex gap-3 sm:gap-5 flex-wrap">
               {skills.map((skill, index) => {
                 return (

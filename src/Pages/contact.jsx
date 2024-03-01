@@ -1,8 +1,31 @@
-import { useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import emailjs from '@emailjs/browser'
 // import emailjs from 'emailjs-com'
 import PageHeader from "../components/PageHeader";
+//gsap
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Contact = () => {
+
+  gsap.registerPlugin(ScrollTrigger)
+  useLayoutEffect(()=>{
+    const tl = gsap.timeline({
+      scrollTrigger:{
+        trigger:"#contact",
+        start:"10% top",
+        end:"center start",
+      }
+    })
+
+    tl.from("#form" ,{
+      y:"100px",
+      opacity:"0",
+      ease:true
+    })
+
+    return () => {tl.kill()}
+  } , [])
+
   const form = useRef()
   const sendEmail = (e) => {
     e.preventDefault();
