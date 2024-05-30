@@ -1,4 +1,4 @@
-import jokeApiImage from "../assets/projectsImages/jokeAPI.png";
+import ecomAPI from "../assets/projectsImages/Ecommerce API.png";
 import videoNexImage from "../assets/projectsImages/videoNex.png";
 import hotelParadise from "../assets/projectsImages/hotelParadise.png";
 import PageHeader from "../components/PageHeader";
@@ -10,8 +10,16 @@ const Projects = () => {
       description:
         "videoNex revolutionizes video streaming by leveraging YouTube API to offer ad-free content across diverse categories. With intuitive search features, personalized user accounts, and seamless playback, it provides a superior viewing experience. Enjoy uninterrupted entertainment, track history, and explore content effortlessly on this user-centric platform.",
       image: videoNexImage,
-      techStack: ["ReactJs", "Tailwind", "Matrial UI", "MongoDB", "NodeJs"],
+      techStack: ["ReactJs", "Tailwind", "NodeJs" ,"Express" , "Matrial UI", "MongoDB", ],
       github: "https://github.com/prynsu07github/MERN-stack-yt-clone",
+    },
+    {
+      name: "Ecommerce API with full Authentication",
+      description:
+        "A robust eCommerce API facilitating seamless integration, enabling developers to access and manage products, orders, payments, and user data securely for enhanced online shopping experiences.",
+      image: ecomAPI,
+      techStack: ["NodeJs", "Express"],
+      github: "https://github.com/prynsu07github/Ecommerce-API",
     },
     {
       name: "Hotel Paradise",
@@ -19,22 +27,13 @@ const Projects = () => {
         "Hotel Paradise Frontend is a visually stunning web project crafted with HTML, CSS, and Bootstrap. Designed to captivate visitors with its modern aesthetics and user-friendly interface, it offers seamless navigation and rich imagery to showcase the luxurious amenities and serene ambiance of Hotel Paradise. With responsive design, it ensures an optimal viewing experience across all devices, inviting guests to explore and book their dream getaway effortlessly.",
       image: hotelParadise,
       github: "https://github.com/prynsu07github/HOTEL-PROJECT",
-      techStack: ["HTML", "CSS", "MongoDB"],
+      techStack: ["HTML", "CSS", "Bootstrap"],
       live: "https://prynsu07github.github.io/HOTEL-PROJECT/",
     },
-    {
-      name: "Joke API",
-      description:
-        "This API provides a seamless platform for accessing, adding, deleting, and replacing jokes effortlessly. Whether you're a developer looking to integrate humor into your applications or simply someone who loves a good laugh, our Joke API has you covered.",
-      image: jokeApiImage,
-      techStack: ["NodeJs" , "Express"],
-      github: "https://github.com/prynsu07github/joke-api",
-    },
-   
   ];
   return (
     <div
-    className="min-h-screen h-auto w-full bg-[#fafafa] relative flex justify-center items-center py-16 sm:py-32"
+      className="min-h-screen h-auto w-full bg-[#fafafa] relative flex justify-center items-center py-16 sm:py-32"
       id="projects"
     >
       <div className=" w-11/12 lg:w-9/12">
@@ -70,11 +69,14 @@ const Projects = () => {
                   </p>
                   <div className="mb-4 sm:mb-8 flex flex-wrap">
                     {project.techStack.map((tech, index) => (
-                      <p key={index} className="text-blue-500 font-semibold text-md sm:text-lg mr-2">
-                      {tech}
+                      <p
+                        key={index}
+                        className="text-blue-500 font-semibold text-md sm:text-lg mr-2"
+                      >
+                        {tech}
                       </p>
                     ))}
-                  </div >
+                  </div>
                   <p className="leading-7 text-gray-500 mb-4 sm:mb-8 text-md sm:text-lg">
                     {project.description}
                   </p>

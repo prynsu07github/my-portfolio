@@ -39,8 +39,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div ref={comp} id="home" className="h-screen w-full relative">
-      <div className="slider absolute top-0 left-0 h-screen w-full bg-white z-10 flex flex-col flex-wrap gap-4 sm:gap-8 py-10 px-2">
+    <div ref={comp} id="home" className="h-screen w-full relative ">
+      <div className="slider absolute top-0 left-0 h-screen w-full bg-white z-10 flex flex-col flex-wrap gap-4 sm:gap-8 py-10 px-2 ">
         <h1 className="title-1 text-6xl  sm:text-9xl font-bold">Web Developer</h1>
         <h1 className=" title-2 text-6xl  sm:text-9xl font-bold">Freelancer</h1>
         <h1 className="title-3 text-6xl  sm:text-9xl font-bold">Designer</h1>
